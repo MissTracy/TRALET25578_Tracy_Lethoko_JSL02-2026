@@ -1,7 +1,9 @@
 const userTask = prompt("Enter task 1 title: ");
 const invalidStatus =
   "Invalid status. Please enter 'todo', 'doing', or 'done'.";
-const tasktStatusPrompt = prompt("please enter task status: ");
+const tasktStatusPrompt = prompt(
+  "please enter task status: ",
+).toLocaleLowerCase();
 
 if (userTask.length > 1) {
   if (
@@ -11,8 +13,8 @@ if (userTask.length > 1) {
   ) {
     prompt(invalidStatus);
   } else if (tasktStatusPrompt === "todo" || tasktStatusPrompt === "doing") {
-    prompt("No tasks completed, let's get to work!");
+    console.log("No tasks completed, let's get to work!");
   } else if (tasktStatusPrompt === "done") {
-    prompt("Title: " + userTask + "Status: done");
+    console.log("Title: " + userTask + ", status: done");
   }
 }
