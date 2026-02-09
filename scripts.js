@@ -1,11 +1,13 @@
 const userTask = prompt("Enter task 1 title: ");
+const userTaskDesc = prompt("Enter task description: ");
+
 const invalidStatus =
   "Invalid status. Please enter 'todo', 'doing', or 'done'.";
 const tasktStatusPrompt = prompt(
   "please enter task status: ",
 ).toLocaleLowerCase();
 
-if (userTask.length > 1) {
+if (userTask.length && userTaskDesc.length > 1) {
   if (
     tasktStatusPrompt !== "todo" &&
     tasktStatusPrompt !== "doing" &&
